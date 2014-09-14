@@ -1,0 +1,17 @@
+{
+  "name": "Destinations",
+  "version": "0.0.0",
+  "description": "Destinations",
+  "main": "app.js",
+  "author": {
+    "name": "Paul",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "memory-cache": "0.0.5",
+    "mocha": "*",
+    "stylus": "*"
+  }
+}
