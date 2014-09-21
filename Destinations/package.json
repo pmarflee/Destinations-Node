@@ -12,6 +12,7 @@
     "jade": "*",
     "memory-cache": "0.0.5",
     "mocha": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "underscore": "^1.7.0"
   }
 }

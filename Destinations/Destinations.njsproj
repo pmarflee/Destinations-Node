@@ -31,7 +31,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="data\CategoryToCategoryViewModelMapper.js" />
     <Compile Include="data\ReadCategories.js">
+      <TestFramework>Mocha</TestFramework>
+    </Compile>
+    <Compile Include="CategoryToCategoryViewModelMapperTests.js">
+      <SubType>Code</SubType>
       <TestFramework>Mocha</TestFramework>
     </Compile>
     <Compile Include="ReadCategoriesTests.js">
