@@ -5,7 +5,6 @@
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
 var fs = require('fs');
@@ -29,10 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // development only
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
+    app.locals.pretty = true;
 }
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/', routes.destinations);
 
 var cacheDestinations = function() {
     fs.readFile('./data/destinations_data.txt', "utf8", function(err, data) {

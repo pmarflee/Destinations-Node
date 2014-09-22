@@ -1,8 +1,8 @@
-﻿
-/*
- * GET home page.
- */
+﻿var cache = require('memory-cache');
+var mapper = require('../data/CategoryToCategoryViewModelMapper');
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+exports.destinations = function(req, res) {
+    var categories = cache.get('categories');
+    var viewmodel = mapper(categories);
+    res.render('destinations', { categories: viewmodel });
 };

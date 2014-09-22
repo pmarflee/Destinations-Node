@@ -1,0 +1,24 @@
+﻿doctype html
+html
+  head
+    title Destinations
+    meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+    link(rel='stylesheet', href='/stylesheets/style.min.css')
+  body
+    div(class='content')
+        div(class='container')
+            div(class='sixteen columns padded whitebg')
+                div(class='sixteen columns alpha omega')
+                    div(class='dropdownStatic')
+                        each category in categories
+                            span(class='headinglink') #{category.name}
+                            ul
+                                div(class='row')
+                                    each column in category.columns
+                                        div(class='two columns')
+                                            each destination in column.destinations
+                                                li
+                                                    a(href='/#{destination.url}') #{destination.name}
+                                            if column.addTrailingBRTag
+                                                br
+                                    br
